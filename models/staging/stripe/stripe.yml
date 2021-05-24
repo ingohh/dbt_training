@@ -1,0 +1,19 @@
+version: 2
+
+models:
+
+  - name: stg_payments
+    description: Staged payment data from our stripe app.
+    columns: 
+      - name: payment_id
+        description: Primary key for payments.
+      - name: order_id
+        description: Foreign key to stg_orders.order_id.
+      - name: status
+        description: "{{ doc('payment_status') }}"
+      - name: payment_method
+        description: How the payment was made.
+      - name: amount
+        description: Size of payment.
+      - name: created_at
+        description: Date payment was made.
