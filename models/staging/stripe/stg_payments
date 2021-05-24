@@ -1,0 +1,9 @@
+select
+    ID payment_id, 	
+    ORDERID as order_id,	
+    PAYMENTMETHOD,	
+    STATUS,	
+    AMOUNT,	
+    CREATED
+
+from raw.stripe.payments
