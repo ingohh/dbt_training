@@ -2,10 +2,9 @@
 	
 One of the following values: 
 
-| status         | definition          |
-|----------------|---------------------|
-| success        | Payment succeeded   |
-| fail           | Payment failed      |
-
+| status         | definition                                       |
+|----------------|--------------------------------------------------|
+| return pending | Payment succeeded                                |
+| returned       | Payment failed                                   |
 
 {% enddocs %}
