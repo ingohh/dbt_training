@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: stripe
+    description: Raw payment data from our stripe app.
+    database: raw
+    tables:
+      - name: payment
+        description: Raw payment data.
+        columns: 
+          - name: id
+            description: Primary key for payments.
+            tests:
+              - unique
+              - not_null            
+          - name: orderid
+            description: Foreign key to stg_orders.order_id.
+          - name: status
+            description: Status the payment transaction is in i.e succeeded or failed.
+          - name: paymentmethod
+            description: How the payment was made.
+          - name: amount
+            description: Size of payment.
+          - name: created
+            description: Date payment was made.
